@@ -14,8 +14,7 @@
 # Assign the function to `swapper` so that the function `run_swapper(..)` can use
 # it. As always, there is a test suite that checks the result. It is in 
 # `question2_test.py.`
-
-swapper = None
+swapper = lambda t: (t[1], t[0])
 
 def run_swapper(list_of_tuples):
   return list(map(swapper, list_of_tuples))

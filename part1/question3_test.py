@@ -1,19 +1,20 @@
+from question3 import make_oven, alchemy_combine
 def test_alchemy_combine():
-
+  oven = make_oven()
   assert alchemy_combine(
-    make_oven(),
+    oven,
     ["lead", "mercury"],
     5000
-  ) == "gold"
+  ) == oven.get_output()
 
   assert alchemy_combine(
-    make_oven(),
+    oven,
     ["water", "air"],
     -100
-  ) == "snow"
+  ) == oven.get_output()
 
   assert alchemy_combine(
-    make_oven(),
+    oven,
     ["cheese", "dough", "tomato"],
     150
-  ) == "pizza"
+  ) == oven.get_output()
